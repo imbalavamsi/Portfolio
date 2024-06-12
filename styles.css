@@ -12,6 +12,11 @@ header {
     text-align: center;
     padding: 2em 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+header:hover {
+    background-color: #333;
 }
 
 header h1 {
@@ -66,6 +71,12 @@ section {
     padding: 1em;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+section:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
 }
 
 h2 {
@@ -73,12 +84,17 @@ h2 {
     font-size: 2em;
     margin-bottom: 0.5em;
     text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.3em;
 }
 
 h3 {
     color: #ddd;
     font-size: 1.5em;
     margin-bottom: 0.5em;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.3em;
 }
 
 ul {
@@ -103,11 +119,12 @@ ul li img {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 4px;
     margin-right: 0.75em;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 ul li img:hover {
     transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .details {
@@ -127,11 +144,12 @@ ul li img:hover {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 4px;
     margin-right: 0.5em;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .details li img:hover {
     transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 footer {
@@ -139,15 +157,20 @@ footer {
     padding: 1em 0;
     background-color: #222;
     color: #fff;
+    transition: background-color 0.3s;
+}
+
+footer:hover {
+    background-color: #333;
 }
 
 footer a {
     color: #fff;
     text-decoration: none;
     margin: 0 0.5em;
+    transition: color 0.3s;
 }
 
 footer a:hover {
     color: #bbb;
-    transition: color 0.3s;
 }
