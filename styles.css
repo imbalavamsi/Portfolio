@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #222;
-    color: #0ff;
+    color: #fff;
     text-align: center;
     padding: 2em 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -45,14 +45,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #0ff;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff0;
+    color: #bbb;
 }
 
 main {
@@ -63,20 +63,20 @@ main {
 
 section {
     margin-bottom: 2em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
 h2 {
-    color: #0ff;
-    border-bottom: 2px solid #0ff;
-    padding-bottom: 0.3em;
-}
-
-.technology-section {
-    margin-bottom: 1.5em;
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
 }
 
 h3 {
-    color: #ff0;
+    color: #ddd;
     font-size: 1.5em;
     margin-bottom: 0.5em;
 }
@@ -99,7 +99,15 @@ ul li {
 ul li img {
     width: 32px;
     height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 4px;
     margin-right: 0.75em;
+    transition: transform 0.3s;
+}
+
+ul li img:hover {
+    transform: scale(1.2);
 }
 
 .details {
@@ -115,23 +123,31 @@ ul li img {
 .details li img {
     width: 24px;
     height: 24px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 4px;
     margin-right: 0.5em;
+    transition: transform 0.3s;
+}
+
+.details li img:hover {
+    transform: scale(1.2);
 }
 
 footer {
     text-align: center;
     padding: 1em 0;
     background-color: #222;
-    color: #0ff;
+    color: #fff;
 }
 
 footer a {
-    color: #0ff;
+    color: #fff;
     text-decoration: none;
     margin: 0 0.5em;
 }
 
 footer a:hover {
-    color: #ff0;
+    color: #bbb;
     transition: color 0.3s;
 }
