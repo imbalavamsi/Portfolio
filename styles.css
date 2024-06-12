@@ -97,6 +97,22 @@ ul li {
 }
 
 ul li img {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.75em;
+}
+
+.details {
+    margin-top: 1em;
+}
+
+.details li {
+    margin: 0.5em 0;
+    display: flex;
+    align-items: center;
+}
+
+.details li img {
     width: 24px;
     height: 24px;
     margin-right: 0.5em;
@@ -112,6 +128,7 @@ footer {
 footer a {
     color: #0ff;
     text-decoration: none;
+    margin: 0 0.5em;
 }
 
 footer a:hover {
