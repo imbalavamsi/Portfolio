@@ -18,17 +18,33 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     const contact = event.target.contact.value;
     const message = event.target.message.value;
 
-    const mailtoLink = `mailto:mbalavamsi@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0AEmail: ${email}%0AContact: ${contact}%0AMessage: ${message}`;
-    window.location.href = mailtoLink;
+    // Send the form data to your email using a server-side script or service like EmailJS
+    // Example using EmailJS:
+    emailjs.send('service_id', 'template_id', {
+        from_name: name,
+        from_email: email,
+        contact_number: contact,
+        message: message
+    }).then(function(response) {
+        alert('Form submitted successfully!');
+        event.target.reset();
+    }, function(error) {
+        alert('Failed to send the form. Please try again later.');
+    });
 });
 
-// Page visit count
-if (localStorage.getItem('visitCount')) {
-    let visitCount = localStorage.getItem('visitCount');
-    visitCount++;
-    localStorage.setItem('visitCount', visitCount);
-    document.getElementById('visit-count').innerText = `Page visits: ${visitCount}`;
+// Page visit count tracking
+if (typeof(Storage) !== "undefined") {
+    // Initialize the visit count
+    if (!sessionStorage.visitCount) {
+        sessionStorage.visitCount = 0;
+    }
+
+    // Increment the visit count
+    sessionStorage.visitCount = Number(sessionStorage.visitCount) + 1;
+
+    // Display the visit count
+    document.getElementById('visit-count').innerText = 'Page visits: ' + sessionStorage.visitCount;
 } else {
-    localStorage.setItem('visitCount', 1);
-    document.getElementById('visit-count').innerText = 'Page visits: 1';
+    document.getElementById('visit-count').innerText = 'Sorry, your browser does not support web storage...';
 }
