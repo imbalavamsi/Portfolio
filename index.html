@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bala Vamsi | Full Stack Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("imbalavamsi@gmail.com");
+        })();
+    </script>
+
 </head>
+
 <body>
     <header>
         <h1>Hello, I'm Bala Vamsi</h1>
@@ -21,12 +30,16 @@
     <main>
         <section id="summary" class="intro">
             <h2>Professional Summary</h2>
-            <p>With over 3 years of experience, I've worked in various industries such as e-commerce and healthcare, utilizing Agile and Waterfall methodologies to ensure timely and accurate project delivery.</p>
+            <p>With over 3 years of experience, I've worked in various industries such as e-commerce and healthcare,
+                utilizing Agile and Waterfall methodologies to ensure timely and accurate project delivery.</p>
             <div class="details">
                 <div><img src="icons/location.png" alt="Location"><span>PA, USA</span></div>
-                <div><img src="icons/website.png" alt="Website"><span><a href="https://imbalavamsi.github.io/imbalavamsi/"> https://imbalavamsi.github.io/imbalavamsi/</a></span></div>
+                <div><img src="icons/website.png" alt="Website"><span><a
+                            href="https://imbalavamsi.github.io/imbalavamsi/">
+                            https://imbalavamsi.github.io/imbalavamsi/</a></span></div>
                 <div><img src="icons/degree.png" alt="Degree"><span>MS/CIS</span></div>
-                <div><img src="icons/email.png" alt="Email"><span><a href="mailto:mbalavamsi@gmail.com"> mbalavamsi@gmail.com</a></span></div>
+                <div><img src="icons/email.png" alt="Email"><span><a href="mailto:mbalavamsi@gmail.com">
+                            mbalavamsi@gmail.com</a></span></div>
             </div>
         </section>
         <section id="technologies" class="technologies">
@@ -34,16 +47,20 @@
             <div class="technology-section">
                 <h3>Back-end Development</h3>
                 <div><img src="icons/java.png" alt="Java"><span>Java: Core development</span></div>
-                <div><img src="icons/spring.png" alt="Spring"><span>Spring Boot & Spring Security: Microservices architectures</span></div>
+                <div><img src="icons/spring.png" alt="Spring"><span>Spring Boot & Spring Security: Microservices
+                        architectures</span></div>
             </div>
             <div class="technology-section">
                 <h3>Databases</h3>
-                <div><img src="icons/database.png" alt="Relational Databases"><span>Relational: MySQL, Oracle, PostgreSQL</span></div>
-                <div><img src="icons/nosql.png" alt="NoSQL Databases"><span>NoSQL: MongoDB, Redis, Cassandra</span></div>
+                <div><img src="icons/database.png" alt="Relational Databases"><span>Relational: MySQL, Oracle,
+                        PostgreSQL</span></div>
+                <div><img src="icons/nosql.png" alt="NoSQL Databases"><span>NoSQL: MongoDB, Redis, Cassandra</span>
+                </div>
             </div>
             <div class="technology-section">
                 <h3>Front-end Development</h3>
-                <div><img src="icons/frontend.png" alt="Frontend"><span>Angular, React JS, HTML/CSS, JavaScript</span></div>
+                <div><img src="icons/frontend.png" alt="Frontend"><span>Angular, React JS, HTML/CSS, JavaScript</span>
+                </div>
             </div>
             <div class="technology-section">
                 <h3>Bug Tracking & Logging</h3>
@@ -56,11 +73,13 @@
             <div class="technology-section">
                 <h3>Testing</h3>
                 <div><img src="icons/testing.png" alt="Java Testing"><span>Java: JUnit, Mockito, PowerMock</span></div>
-                <div><img src="icons/frontend-testing.png" alt="Front-end Testing"><span>Front-end: Jasmine, Karma, Cucumber</span></div>
+                <div><img src="icons/frontend-testing.png" alt="Front-end Testing"><span>Front-end: Jasmine, Karma,
+                        Cucumber</span></div>
             </div>
             <div class="technology-section">
                 <h3>Messaging Frameworks</h3>
-                <div><img src="icons/messaging.png" alt="Messaging"><span>Frameworks: Kafka, RabbitMQ, ActiveMQ</span></div>
+                <div><img src="icons/messaging.png" alt="Messaging"><span>Frameworks: Kafka, RabbitMQ, ActiveMQ</span>
+                </div>
             </div>
         </section>
         <section id="contact">
@@ -68,31 +87,32 @@
             <form id="contact-form">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required>
-                
+
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="contact">Contact</label>
                 <input type="text" id="contact" name="contact" required>
-                
+
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required></textarea>
-                
+
                 <button type="submit">Submit</button>
             </form>
         </section>
         <section id="resume">
             <h2>Resume</h2>
-            <a href="resume.pdf" download>Download my resume</a>
+            <a href="attachments/resume.pdf" download>Download my resume</a>
         </section>
     </main>
     <footer>
-        <p>Contact me on 
-            <a href="https://github.com/imbalavamsi">GitHub</a> | 
+        <p>Contact me on
+            <a href="https://github.com/imbalavamsi">GitHub</a> |
             <a href="https://www.linkedin.com/in/bala-vamsi-maragani/">LinkedIn</a>
         </p>
         <p id="visit-count">Page visits: 0</p>
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
