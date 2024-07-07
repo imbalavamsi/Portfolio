@@ -165,9 +165,15 @@ footer a:hover {
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s;
+  display: block;
 }
 
 .download-button:hover {
   background-color: #8f94fb;
   transform: scale(1.1);
+}
+
+#visit-count {
+  margin-top: 1em;
+  font-size: 1.2em;
 }

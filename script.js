@@ -1,15 +1,21 @@
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const visitCountKey = "pageVisitCount";
+  let visitCount = localStorage.getItem(visitCountKey);
 
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
+  if (visitCount === null) {
+    visitCount = 0;
+  } else {
+    visitCount = parseInt(visitCount, 10);
+  }
+
+  visitCount += 1;
+  localStorage.setItem(visitCountKey, visitCount);
+
+  document.getElementById(
+    "visit-count"
+  ).innerText = `Page visits: ${visitCount}`;
 });
 
-// Form submission handling
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
@@ -21,7 +27,7 @@ document
     const message = event.target.message.value;
 
     emailjs
-      .send("service_loo7p3c", "template_j3q2s15", {
+      .send("service_wu9folc", "YOUR_TEMPLATE_ID", {
         from_name: name,
         from_email: email,
         contact: contact,
