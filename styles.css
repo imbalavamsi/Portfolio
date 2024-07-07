@@ -1,125 +1,144 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #111;
-    color: #fff;
-    width: 100vw;
-    height: 100vh;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
 }
 
-header, nav, main, footer {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+header,
+nav,
+main,
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 header h1 {
-    text-align: center;
+  text-align: center;
 }
 
 header p {
-    text-align: center;
-    font-size: 1.2em;
+  text-align: center;
+  font-size: 1.2em;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
 nav ul li {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s; /* Add transition */
+}
+
+nav ul li a:hover {
+  color: #bbb; /* Change color on hover */
 }
 
 main {
-    padding: 2em 0;
+  padding: 2em 0;
 }
 
 section {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 h2 {
-    color: #fff;
-    font-size: 1.8em;  /* Reduced size */
-    margin-bottom: 0.5em;
-    text-align: center;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 0.3em;
+  color: #fff;
+  font-size: 1.8em; /* Reduced size */
+  margin-bottom: 0.5em;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.3em;
+  transition: color 0.3s; /* Add transition */
+}
+h2:hover {
+  color: #ff0000; /* Change color on hover */
 }
 
 h3 {
-    color: #ddd;
-    font-size: 1.2em;  /* Reduced size */
-    margin-bottom: 0.5em;
-    text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 0.3em;
+  color: #ddd;
+  font-size: 1.2em; /* Reduced size */
+  margin-bottom: 0.5em;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.3em;
 }
 
-.technology-section, .details {
-    padding: 10px 0;
+.technology-section,
+.details {
+  padding: 10px 0;
 }
 
-.technology-section div, .details div {
-    margin-bottom: 10px;
+.technology-section div,
+.details div {
+  margin-bottom: 10px;
 }
 
-.technology-section span, .details span {
-    margin-left: 10px;
+.technology-section span,
+.details span {
+  margin-left: 10px;
 }
 
 footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #222;
-    color: #fff;
-    transition: background-color 0.3s;
+  text-align: center;
+  padding: 1em 0;
+  background-color: #222;
+  color: #fff;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+
 }
 
 footer:hover {
-    background-color: #333;
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Change box shadow on hover */
 }
 
 footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 0.5em;
-    transition: color 0.3s;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5em;
+  transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #bbb;
+  color: #bbb;
 }
 
 #contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contact-form label {
-    margin: 10px 0 5px;
+  margin: 10px 0 5px;
 }
 
-#contact-form input, #contact-form textarea {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    margin-bottom: 10px;
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 #contact-form button {
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
 }
