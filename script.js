@@ -27,7 +27,7 @@ document
     const message = event.target.message.value;
 
     emailjs
-      .send("service_wu9folc", "YOUR_TEMPLATE_ID", {
+      .send("service_wu9folc", "template_j3q2s15", {
         from_name: name,
         from_email: email,
         contact: contact,
