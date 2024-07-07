@@ -24,34 +24,15 @@ document
       .send("service_loo7p3c", "template_j3q2s15", {
         from_name: name,
         from_email: email,
-        contact_number: contact,
+        contact: contact,
         message: message,
       })
       .then(
-        function (response) {
-          alert("Form submitted successfully!");
-          event.target.reset();
+        (response) => {
+          alert("Message sent successfully!");
         },
-        function (error) {
-          alert("Failed to send the form. Please try again later.");
+        (error) => {
+          alert("Failed to send the message. Please try again later.");
         }
       );
   });
-
-// Page visit count tracking
-if (typeof Storage !== "undefined") {
-  // Initialize the visit count
-  if (!sessionStorage.visitCount) {
-    sessionStorage.visitCount = 0;
-  }
-
-  // Increment the visit count
-  sessionStorage.visitCount = Number(sessionStorage.visitCount) + 1;
-
-  // Display the visit count
-  document.getElementById("visit-count").innerText =
-    "Page visits: " + sessionStorage.visitCount;
-} else {
-  document.getElementById("visit-count").innerText =
-    "Sorry, your browser does not support web storage...";
-}
