@@ -4,16 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Balavamsi_Maragani | Full Stack Developer</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script
-      type="text/javascript"
-      src="https://cdn.emailjs.com/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("imbalavamsi@gmail.com");
-      })();
-    </script>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <header>
@@ -48,7 +40,7 @@
           <div>
             <img src="icons/email.png" alt="Email" /><span
               ><a href="mailto:mbalavamsi26@gmail.com">
-                mbalavamsi@gmail.com</a
+                mbalavamsi26@gmail.com</a
               ></span
             >
           </div>
@@ -131,21 +123,56 @@
       </section>
       <section id="contact">
         <h2>Contact Me</h2>
-        <form id="contact-form">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="contact">Contact</label>
-          <input type="text" id="contact" name="contact" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button type="submit">Submit</button>
-        </form>
+        <div class="container">
+          <form id="contactForm">
+            <input
+              type="hidden"
+              name="access_key"
+              value="86f9f042-cb4a-4459-850c-5a0a037db144"
+            />
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                name="phone"
+                placeholder="phone"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                placeholder="message"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
       </section>
       <section id="resume">
         <h2>Resume</h2>
@@ -164,6 +191,7 @@
       </p>
       <p id="visit-count">Page visits: 0</p>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

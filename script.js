@@ -17,28 +17,40 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document
-  .getElementById("contact-form")
+  .getElementById("contactForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const name = event.target.name.value;
-    const email = event.target.email.value;
-    const contact = event.target.contact.value;
-    const message = event.target.message.value;
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var message = document.getElementById("message").value;
 
-    emailjs
-      .send("service_wu9folc", "template_j3q2s15", {
-        from_name: name,
-        from_email: email,
-        contact: contact,
-        message: message,
-      })
-      .then(
-        (response) => {
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          alert("Failed to send the message. Please try again later.");
+    if (!name || !email || !phone || !message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    // Prepare the data to be sent
+    var formData = new FormData(this);
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          // Redirect to success page
+          window.location.href = "success.html";
+        } else {
+          alert("Form submission failed. Please try again.");
         }
-      );
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("An error occurred. Please try again.");
+      });
+
+    this.reset();
   });
