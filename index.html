@@ -3,9 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Balavamsi_Maragani | Full Stack Developer</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-    <script defer src="script.js"></script>
+    <title>BALA VAMSI MARAGANI | Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("imbalavamsi@gmail.com");
+      })();
+    </script>
   </head>
   <body>
     <header>
@@ -14,15 +26,14 @@
     </header>
     <nav>
       <ul>
-        <li><a href="#summary">Career Summary</a></li>
+        <li><a href="#summary">Professional Summary</a></li>
         <li><a href="#technologies">Technologies</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#resume">Resume</a></li>
       </ul>
     </nav>
     <main>
       <section id="summary" class="intro">
-        <h2>Career Summary</h2>
+        <h2>Professional Summary</h2>
         <p>
           With over 3 years of experience, I've worked in various industries
           such as e-commerce and healthcare, utilizing Agile and Waterfall
@@ -30,8 +41,13 @@
         </p>
         <div class="details">
           <div>
-            <img src="icons/location.png" alt="Location" /><span
-              >Newark, NJ - USA</span
+            <img src="icons/location.png" alt="Location" /><span>PA, USA</span>
+          </div>
+          <div>
+            <img src="icons/website.png" alt="Website" /><span
+              ><a href="https://imbalavamsi.github.io/imbalavamsi/">
+                https://imbalavamsi.github.io/imbalavamsi/</a
+              ></span
             >
           </div>
           <div>
@@ -39,8 +55,8 @@
           </div>
           <div>
             <img src="icons/email.png" alt="Email" /><span
-              ><a href="mailto:mbalavamsi26@gmail.com">
-                mbalavamsi26@gmail.com</a
+              ><a href="mailto:mbalavamsi@gmail.com">
+                mbalavamsi@gmail.com</a
               ></span
             >
           </div>
@@ -78,28 +94,12 @@
           <h3>Front-end Development</h3>
           <div>
             <img src="icons/frontend.png" alt="Frontend" /><span
-              >Angular, React JS, HTML/CSS, JavaScript</span
+              >Angular & React: Front-end frameworks</span
             >
           </div>
         </div>
         <div class="technology-section">
-          <h3>Bug Tracking & Logging</h3>
-          <div>
-            <img src="icons/bug.png" alt="Bug Tracking" /><span
-              >Tools: JIRA, Firebug, Log4J</span
-            >
-          </div>
-        </div>
-        <div class="technology-section">
-          <h3>Version Control</h3>
-          <div>
-            <img src="icons/git.png" alt="Git" /><span
-              >Tools: Git, GitHub, Bitbucket</span
-            >
-          </div>
-        </div>
-        <div class="technology-section">
-          <h3>Testing</h3>
+          <h3>Testing Frameworks</h3>
           <div>
             <img src="icons/testing.png" alt="Java Testing" /><span
               >Java: JUnit, Mockito, PowerMock</span
@@ -121,67 +121,37 @@
           </div>
         </div>
       </section>
-      <section id="contact">
+      <section id="contact" class="container">
         <h2>Contact Me</h2>
-        <div class="container">
-          <form id="contactForm">
-            <input
-              type="hidden"
-              name="access_key"
-              value="86f9f042-cb4a-4459-850c-5a0a037db144"
-            />
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                name="name"
-                placeholder="name"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="email"
-                placeholder="email"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="tel"
-                class="form-control"
-                id="phone"
-                name="phone"
-                placeholder="phone"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <textarea
-                class="form-control"
-                id="message"
-                name="message"
-                placeholder="message"
-                rows="3"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+        <div class="row">
+          <div class="col-md-6">
+            <form id="contact-form">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="contact">Contact</label>
+              <input type="text" id="contact" name="contact" required />
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div
+            class="col-md-6 d-flex align-items-center justify-content-center"
+          >
+            <a
+              href="attachments/Balavamsi_Maragani_Resume.pdf"
+              download
+              class="btn btn-primary"
+              >Download my resume</a
+            >
+          </div>
         </div>
-      </section>
-      <section id="resume">
-        <h2>Resume</h2>
-        <a
-          href="attachments/Balavamsi_Maragani_Resume.pdf"
-          download
-          class="download-button"
-          >Download my resume</a
-        >
       </section>
     </main>
     <footer>
@@ -191,7 +161,9 @@
       </p>
       <p id="visit-count">Page visits: 0</p>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
